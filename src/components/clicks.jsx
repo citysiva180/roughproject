@@ -26,12 +26,17 @@ class Clicker extends Component {
   //   Toggle Button Logic
   //==============================
 
+  // For the toggle button to work the state must be initialized as true
+  // Then the setState should have an not operator which would change the state from true to false.
+
   handleToggle = () => {
     this.setState((state) => ({
       isToggle: !state.isToggle,
     }));
   };
-
+  //===============================================
+  //Other logics to change color and other details
+  //===============================================
   buttonColor = () => {
     let classes = "btn btn-lg btn-";
     classes += this.state.isToggle === true ? "success" : "danger";
